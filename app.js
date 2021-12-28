@@ -6,6 +6,18 @@
 
 
     // Create Human Object
+    const createHuman = () => {
+        const name = document.getElementById('name').value;
+        const heightFeet = document.getElementById('feet').value;
+        const heightInches = document.getElementById('inches').value;
+        const diet = document.getElementById('diet').value;
+        const height = heightFeet * 12 + heightInches;
+        return {
+            name,
+            height,
+            diet,
+        }
+    }
 
     // Use IIFE to get human data from form
 
@@ -46,5 +58,5 @@
         dinoGrid.style.display = null;
     };
     compareButton.addEventListener('click', showCompareGrid);
-    
+
 // On button click, prepare and display infographic
